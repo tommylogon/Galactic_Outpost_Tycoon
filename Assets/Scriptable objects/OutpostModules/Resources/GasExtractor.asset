@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce9387b1e9f7adc40ad87f26641cd204, type: 3}
+  m_Name: GasExtractor
+  m_EditorClassIdentifier: 
+  Name: Gas condencer
+  level: 0
+  image: {fileID: 0}
+  resourceProductionBase: 0
+  resourceProductionIncrease: 0
+  powerBase: 0
+  powerIncrease: 0
+  baseCrewRequirement: 0
+  crewIncrease: 0
+  CrewCurrent: 0
+  TimeBase: 0
+  UpgradeTime: 0
+  upgradeTimeIncrease: 0
+  wasteProduction:
+  - Type: 11
+    Amount: 0
+  - Type: 9
+    Amount: 0
+  wasteProductionIncrease: 0
+  upgradeCost: []
+  upgradeCostIncrease: 0
+  ResourceType: 2

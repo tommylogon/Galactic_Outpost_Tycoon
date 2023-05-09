@@ -1,0 +1,40 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="root">
+        <ui:VisualElement name="topRow" style="flex-direction: row; justify-content: space-between;">
+            <ui:VisualElement name="resourcePanel" style="flex-direction: row; justify-content: center; align-items: center; flex-grow: 1;">
+                <ui:Button name="createOutpostButton" text="Create Outpost" />
+                <ui:Label name="moneyLabel" text="Money: 0" />
+                <ui:Label name="metalsLabel" text="Metals: 0" />
+                <ui:Label name="mineralsLabel" text="Minerals: 0" />
+                <ui:Label name="gasLabel" text="Gas: 0" />
+                <ui:Label name="foodLabel" text="Food: 0" />
+                <ui:Label name="powerLabel" text="Power: 0" />
+                <ui:Label name="agriculturalSuppliesLabel" text="Agricultural Supplies: 0" />
+                <ui:Label name="alloysLabel" text="Alloys: 0" />
+                <ui:Label name="consumerGoodsLabel" text="Consumer Goods: 0" />
+                <ui:Label name="medicalSuppliesLabel" text="Medical Supplies: 0" />
+                <ui:Label name="wasteLabel" text="Waste: 0" />
+                <ui:Label name="viceLabel" text="Vice: 0" />
+                <ui:Label name="scrapLabel" text="Scrap: 0" />
+                <ui:Label name="habitationLabel" text="Habitation: 0/0" />
+                <ui:Label name="storageLabel" text="Storage: 0/0" />
+                <ui:Label name="hangarSpaceLabel" text="Hangar Space: 0" />
+            </ui:VisualElement>
+            <ui:Button name="menuButton" text="Menu" />
+        </ui:VisualElement>
+        <ui:VisualElement name="mainArea" style="flex-direction: row;">
+            <ui:VisualElement name="leftColumn" style="flex-direction: column;">
+                <ui:Button name="overviewButton" text="Overview" />
+                <ui:Button name="resourcesButton" text="Resources" />
+                <ui:Button name="employeesButton" text="Employees" />
+                <ui:Button name="outpostModulesButton" text="Outpost modules" />
+                <ui:Button name="missionsButton" text="Missions" />
+                <ui:Button name="shipyardButton" text="Shipyard" />
+                <ui:Button name="defenceButton" text="Defence" />
+                <ui:Button name="fleetButton" text="Fleet" />
+                <ui:Button name="starmapButton" text="Starmap" />
+            </ui:VisualElement>
+            <ui:VisualElement name="gameContentArea" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

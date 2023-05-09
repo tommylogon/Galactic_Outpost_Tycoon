@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+  <ui:VisualElement name="locationSelectionContent">
+    <ui:Label text="Select a Location" class="panel-title" />
+    <ui:ScrollView name="locationList" style="width: 100%; height: 100%;">
+      <!-- Location buttons will be added here -->
+    </ui:ScrollView>
+  </ui:VisualElement>
+</ui:UXML>

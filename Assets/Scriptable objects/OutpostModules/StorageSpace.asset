@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b081507cd2ea5064b8f5aba6898aaa56, type: 3}
+  m_Name: StorageSpace
+  m_EditorClassIdentifier: 
+  Name: Storage
+  level: 0
+  image: {fileID: 0}
+  resourceProductionBase: 0
+  resourceProductionIncrease: 0
+  powerBase: 2
+  powerIncrease: 1
+  baseCrewRequirement: 1
+  crewIncrease: 1
+  CrewCurrent: 0
+  TimeBase: 25
+  UpgradeTime: 0
+  upgradeTimeIncrease: 15
+  wasteProduction:
+  - Type: 11
+    Amount: 1
+  - Type: 9
+    Amount: 1
+  wasteProductionIncrease: 0
+  upgradeCost:
+  - Type: 0
+    Amount: 0
+  - Type: 0
+    Amount: 0
+  upgradeCostIncrease: 0
+  CurrentResourceStorage: []
+  MaxStorage: 0
+  BaseMaxStorage: 500
+  MaxStorageIncrease: 250

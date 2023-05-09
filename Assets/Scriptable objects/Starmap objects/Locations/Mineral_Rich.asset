@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed4c7299d3a81d4294fef1048487036, type: 3}
+  m_Name: Mineral_Rich
+  m_EditorClassIdentifier: 
+  Name: Microtech_Start_Mineral_Rich
+  LocationObject: {fileID: 11400000, guid: 2fde4251fb305c644bdb9fe6f41ab639, type: 2}
+  AvailableResources: 000000000100000002000000
+  ResourceChances:
+  - 1
+  - 1
+  - 1
+  ResourceAmount: 204e000050c3000010270000
+  InitializedResources: []
+  HabitabilityScore: 60
+  CurrentSpaceUsed: 0
+  MaxAvailableSpace: 500

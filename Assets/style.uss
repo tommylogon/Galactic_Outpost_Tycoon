@@ -1,0 +1,11 @@
+.outpost-modules {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: scroll;
+}
+
+.IncementButton {
+    width: 40px;
+    height: 40px;
+}

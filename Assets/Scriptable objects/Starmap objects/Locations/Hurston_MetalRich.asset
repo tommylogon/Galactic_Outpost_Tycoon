@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed4c7299d3a81d4294fef1048487036, type: 3}
+  m_Name: Hurston_MetalRich
+  m_EditorClassIdentifier: 
+  Name: Hurston_StartingMetalRich
+  LocationObject: {fileID: 11400000, guid: 039d852f6cd50d847989d496143f155e, type: 2}
+  AvailableResources: 000000000100000002000000
+  ResourceChances:
+  - 1
+  - 1
+  - 1
+  ResourceAmount: 204e00001027000000000000
+  InitializedResources: []
+  HabitabilityScore: 73
+  CurrentSpaceUsed: 0
+  MaxAvailableSpace: 5000

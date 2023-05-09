@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41ece874b85dfb642a0b9e0814a21643, type: 3}
+  m_Name: Hurston
+  m_EditorClassIdentifier: 
+  Name: Hurston
+  Size: 1274
+  DistanceFromStar: 12810903
+  Star: {fileID: 11400000, guid: fa647b7831f2d344dbee124ed07184cc, type: 2}
+  Moons:
+  - {fileID: 11400000, guid: b36eedc9ff84b9841ae6b84efb6a3770, type: 2}
+  stations: []
+  locations:
+  - {fileID: 11400000, guid: f7df3e47ba19f384c99374b214ee95b2, type: 2}

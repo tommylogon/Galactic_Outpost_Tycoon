@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41ece874b85dfb642a0b9e0814a21643, type: 3}
+  m_Name: Crusader
+  m_EditorClassIdentifier: 
+  Name: 
+  Size: 16000
+  DistanceFromStar: 19000000
+  Star: {fileID: 11400000, guid: fa647b7831f2d344dbee124ed07184cc, type: 2}
+  Moons:
+  - {fileID: 11400000, guid: 193ce342a4fdf5043938eaea7036f69b, type: 2}
+  - {fileID: 11400000, guid: 3db9fa2b9965bca4390c07bb2dfacb52, type: 2}
+  - {fileID: 11400000, guid: 29a046d3d1386064e9ffb7a20560ccf1, type: 2}
+  stations: []
+  locations: []

@@ -1,0 +1,35 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+  <ui:VisualElement name="overviewContent">
+    <!-- Outpost Summary -->
+    <ui:VisualElement name="outpostSummary" class="panel">
+      <ui:Label text="Outpost Name: " />
+      <ui:Label text="Location: " />
+      <ui:Label text="Level: " />
+      <ui:Image name="outpostThumbnail" />
+    </ui:VisualElement>
+
+    <!-- Resource Status -->
+    <ui:VisualElement name="resourceStatus" class="panel">
+      <ui:Label text="Resource Status" class="panel-title" />
+      <!-- Add resource-specific information here -->
+    </ui:VisualElement>
+
+    <!-- Building Status -->
+    <ui:VisualElement name="buildingStatus" class="panel">
+      <ui:Label text="Building Status" class="panel-title" />
+      <!-- Add building-specific information here -->
+    </ui:VisualElement>
+
+    <!-- Human Status -->
+    <ui:VisualElement name="humanStatus" class="panel">
+      <ui:Label text="Human Status" class="panel-title" />
+      <!-- Add human-specific information here -->
+    </ui:VisualElement>
+
+    <!-- Active Missions -->
+    <ui:VisualElement name="activeMissions" class="panel">
+      <ui:Label text="Active Missions" class="panel-title" />
+      <!-- Add mission-specific information here -->
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

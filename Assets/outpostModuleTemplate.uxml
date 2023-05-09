@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/style.uss?fileID=7433441132597879392&amp;guid=e2f7939a6fd57ef4cb8ce94677c041e6&amp;type=3#style" />
+    <ui:VisualElement name="outpostModuleTemplate" class="outpost-module">
+        <ui:Button name="outpostModuleButton" style="flex-shrink: 1; flex-grow: 1; width: 150px; height: 150px;">
+            <ui:VisualElement style="flex-direction: row;">
+                <ui:Button name="outpostModuleQuickUpgradeButton" tooltip="Quick Upgrade" style="background-image: url(&apos;project://database/Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/d_iconaddedlocal@2x.png?fileID=2800000&amp;guid=02800fb9cff14da47a04572790384d8b&amp;type=3#d_iconaddedlocal@2x&apos;); width: 32px; height: 32px;" />
+                <ui:Label text="Name: " />
+                <ui:Label name="selectedModuleName" />
+            </ui:VisualElement>
+            <ui:Image name="outpostModuleImage" style="background-color: rgba(115, 115, 115, 255); width: auto; height: auto; flex-grow: 1;" />
+            <ui:VisualElement style="flex-direction: row;">
+                <ui:Label name="outpostModuleLevel" />
+                <ui:Label text="Level: " />
+            </ui:VisualElement>
+        </ui:Button>
+    </ui:VisualElement>
+</ui:UXML>
