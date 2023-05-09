@@ -1,4 +1,4 @@
-using static OutpostManager;
+using static Resource;
 
 [System.Serializable]
 public class ResourceStorageItem

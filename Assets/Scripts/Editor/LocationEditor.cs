@@ -1,6 +1,6 @@
 using UnityEditor;
 using UnityEngine;
-using static OutpostManager;
+using static Resource;
 
 [CustomEditor(typeof(Location))]
 public class LocationEditor : Editor

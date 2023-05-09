@@ -7,6 +7,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 using static OutpostManager;
+using static Resource;
 
 public class UIController : MonoBehaviour
 {
@@ -39,6 +40,9 @@ public class UIController : MonoBehaviour
     private Button createOutpostButton;
     private Button resourcesButton;
     private Button outpostModulesButton;
+    Button addCrewButton;
+    Button removeCrewButton;
+    Button upgradeButton;
 
     private SolarSystemManager solarSystemManager;
     private OutpostResourceManager outpostResourceManager;
@@ -57,6 +61,17 @@ public class UIController : MonoBehaviour
     private Label habitationLabel;
     private Label storageLabel;
     private Label hangarSpaceLabel;
+
+    private Label upgradeTimer;
+
+    private Label selectedModuleNextLevelCrewRequirement;
+    private Label selectedModuleNextLevelResourceProduction;
+    private Label selectedModuleNextLevelWasteProduction;
+    private Label selectedModuleNextLevelPowerConsumption;
+    
+    private Label selectedModuleNextLevelUpgradeTimer;
+    private Label selectedModuleNextLevelUpgradeCost;
+
 
 
 
@@ -205,14 +220,38 @@ public class UIController : MonoBehaviour
         
         Label habitationLabel = root.Q<Label>("habitationLabel");
         Label storageLabel = root.Q<Label>("storageLabel");
+        Label selectedModuleName = root.Q<Label>("selectedModuleName");
+        Label selectedModuleLevel = root.Q<Label>("selectedModuleLevel");
+        Label selectedModuleEnergy = root.Q<Label>("selectedModuleEnergy");
 
-        root.Q<Button>("selectedModuleAddCrewButton").clicked += () => AddCrewToModule(module);
-        root.Q<Button>("selectedModuleRemoveCrewButton").clicked += () => RemoveCrewFromModule(module);
+        selectedModuleNextLevelCrewRequirement = root.Q<Label>("nextLevelCrewRequirement");
+        selectedModuleNextLevelResourceProduction = root.Q<Label>("nextLevelResourceProduction");
+        selectedModuleNextLevelWasteProduction = root.Q<Label>("nextLevelWasteProduction");
+        selectedModuleNextLevelPowerConsumption = root.Q<Label>("nextLevelPowerConsumption");
+        upgradeTimer = root.Q<Label>("nextLevelTimer");
+        selectedModuleNextLevelUpgradeTimer = root.Q<Label>("moduleUpgradeLable");
+
+
+        addCrewButton = root.Q<Button>("selectedModuleAddCrewButton");
+        removeCrewButton = root.Q<Button>("selectedModuleRemoveCrewButton");
+        upgradeButton = root.Q<Button>("selectedModuleUpgradeButton");
+
+
+        addCrewButton.clicked -= () => AddCrewToModule(module);
+        removeCrewButton.clicked -= () => RemoveCrewFromModule(module);
+        upgradeButton.clicked -= () => UpgradeSelectedModule(module);
+
+        // Add new event listeners
+        addCrewButton.clicked += () => AddCrewToModule(module);
+        removeCrewButton.clicked += () => RemoveCrewFromModule(module);
+        upgradeButton.clicked += () => UpgradeSelectedModule(module);
+
         // Update the current crew label
         UpdateModuleCrewLabel(module);
 
-        string wasteProductionStr = string.Join(", ", module.wasteProduction.Select(res => $"{res.Type}: {res.Amount}"));
-        string upgradeCostStr = string.Join(", ", module.upgradeCost.Select(res => $"{res.Type}: {res.Amount}"));
+        string wasteProductionStr = Resource.ListToString(module.wasteProduction);
+        string upgradeCostStr = Resource.ListToString(module.upgradeCost);
+
 
         root.Q<Label>("selectedModuleUpgradeCost").text = upgradeCostStr;
 
@@ -243,14 +282,28 @@ public class UIController : MonoBehaviour
             storageLabel.style.display = DisplayStyle.None;
             habitationLabel.style.display = DisplayStyle.None;
         }
-        root.Q<Button>("selectedModuleUpgradeButton").clicked += () => UpgradeSelectedModule(module);
-        root.Q<Label>("selectedModuleName").text = module.Name;
-        root.Q<Label>("selectedModuleLevel").text = module.level.ToString();
-        root.Q<Label>("selectedModuleEnergy").text = module.PowerRequirement.ToString();
+        
+        selectedModuleName.text = module.Name;
+        selectedModuleLevel.text = module.level.ToString();
+        module.PowerRequirement.ToString();
 
         UpdateModuleCrewLabel(module);
         root.Q<Label>("selectedModuleWasteProduction").text = wasteProductionStr;
+
+        UpdateNextLevelStats(module);
     }
+
+    public void UpdateNextLevelStats(OutpostModule module)
+    {
+        int nextLevel = module.level + 1;
+        selectedModuleNextLevelCrewRequirement.text = $"Next Level Crew Requirement: {module.GetCrewRequirementForLevel(nextLevel)}";
+        selectedModuleNextLevelResourceProduction.text = $"Next Level Resource Production: {module.CalculateResourceProduction(nextLevel)}";
+        selectedModuleNextLevelWasteProduction.text = $"Next Level Waste Production: {Resource.ListToString(module.CalculateWasteProduction(nextLevel))}";
+        selectedModuleNextLevelPowerConsumption.text = $"Next Level Power Consumption: {module.CalculatePowerRequirement(nextLevel)}";
+        selectedModuleNextLevelUpgradeTimer.text = $"Upgrade Timer: {module.CalculateUpgradeTime(nextLevel)}";
+        selectedModuleNextLevelUpgradeCost.text = $"Next Level Upgrade Cost: {Resource.ListToString(module.upgradeCost)}";
+    }
+
     private void UpgradeSelectedModule(OutpostModule module)
     {
         Outpost selectedOutpost = OutpostManager.PlayerOutpostManager.selectedOutpost;

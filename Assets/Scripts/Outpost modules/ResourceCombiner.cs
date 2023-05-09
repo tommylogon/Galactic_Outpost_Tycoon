@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using static OutpostManager;
+using static Resource;
 
 [CreateAssetMenu(fileName = "ResourceCombiner", menuName = "Outpost/ResourceCombiner")]
 public class ResourceCombiner : OutpostModule

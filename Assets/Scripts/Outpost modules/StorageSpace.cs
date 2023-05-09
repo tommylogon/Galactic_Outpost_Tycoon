@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using static OutpostManager;
+using static Resource;
 
 [CreateAssetMenu(fileName = "StorageSpace", menuName = "Outpost/StorageSpace")]
 public class StorageSpace : OutpostModule

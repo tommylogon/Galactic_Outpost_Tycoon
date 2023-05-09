@@ -1,8 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <ui:VisualElement name="root">
-        <ui:VisualElement name="topRow" style="flex-direction: row; justify-content: space-between;">
+        <ui:VisualElement name="topRow" style="flex-direction: row; justify-content: flex-start; flex-grow: 1;">
             <ui:VisualElement name="resourcePanel" style="flex-direction: row; justify-content: center; align-items: center; flex-grow: 1;">
-                <ui:Button name="createOutpostButton" text="Create Outpost" />
                 <ui:Label name="moneyLabel" text="Money: 0" />
                 <ui:Label name="metalsLabel" text="Metals: 0" />
                 <ui:Label name="mineralsLabel" text="Minerals: 0" />
@@ -24,6 +23,7 @@
         </ui:VisualElement>
         <ui:VisualElement name="mainArea" style="flex-direction: row;">
             <ui:VisualElement name="leftColumn" style="flex-direction: column;">
+                <ui:Button name="createOutpostButton" text="Create Outpost" />
                 <ui:Button name="overviewButton" text="Overview" />
                 <ui:Button name="resourcesButton" text="Resources" />
                 <ui:Button name="employeesButton" text="Employees" />

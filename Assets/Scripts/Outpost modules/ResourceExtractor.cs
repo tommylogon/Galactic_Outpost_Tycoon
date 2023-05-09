@@ -1,5 +1,5 @@
 using UnityEngine;
-using static OutpostManager;
+using static Resource;
 
 [CreateAssetMenu(fileName = "ResourceExtractor", menuName = "Outpost/ResourceExtractor")]
 public class ResourceExtractor : OutpostModule

@@ -5,26 +5,7 @@ using UnityEngine;
 
 public class OutpostManager : MonoBehaviour
 {
-    public enum ResourceType
-    {
-        Metals,
-        Minerals,
-        Gas,
-        Food,
-        Power,
-        AgriculturalSupplies,
-        Alloys,
-        ConsumerGoods,
-        MedicalSupplies,
-        Waste,
-        Vice,
-        Scrap,
-        Habitation,
-        Storage,
-        HangarSpace,
-        Money
-
-    }
+    
     public static OutpostManager PlayerOutpostManager;
     public List<Outpost> Outposts;
     public List<OutpostModule> AvailableModules; // List of ScriptableObjects
