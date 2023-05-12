@@ -1,5 +1,7 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEditor.FilePathAttribute;
 
@@ -7,7 +9,8 @@ public class SolarSystemManager : MonoBehaviour
 {
     public Star Star;
     public List<Location> Locations;
-
+    public MapManager mapManager;
+    public float updateInterval = 60;
 
 
     private void Start()
@@ -17,6 +20,8 @@ public class SolarSystemManager : MonoBehaviour
 
         // Initialize resources for all locations
         InitializeResourcesForAllLocations();
+
+        
     }
 
 
@@ -77,4 +82,21 @@ public class SolarSystemManager : MonoBehaviour
             location.InitializeResources();
         }
     }
+    private IEnumerator UpdatePositionsCoroutine()
+    {
+        while (true)
+        {
+            foreach (Planet planet in Star.Planets)
+            {
+                // Update the planet's rotation and call UpdateSolarSystemObjectPosition
+                planet.Rotation += planet.RotationSpeed * Time.deltaTime;
+                mapManager.UpdateSolarSystemObjectPosition(planet, planet.DistanceFromParent, planet.Rotation);
+            }
+
+            // Do the same for moons and stations
+
+            yield return new WaitForSeconds(updateInterval);
+        }
+    }
+
 }

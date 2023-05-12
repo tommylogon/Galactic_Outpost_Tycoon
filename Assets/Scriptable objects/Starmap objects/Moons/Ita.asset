@@ -9,19 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ece874b85dfb642a0b9e0814a21643, type: 3}
-  m_Name: Microtech
+  m_Script: {fileID: 11500000, guid: b67144a8ec66cda44a317aa96c6ea1e8, type: 3}
+  m_Name: Ita
   m_EditorClassIdentifier: 
   Position: {x: 0, y: 0}
   Type: 0
   Name: 
-  Size: 2000
-  DistanceFromParent: 51
+  Size: 1
+  DistanceFromParent: 117000
   Rotation: 0
   RotationSpeed: 0
-  color: {r: 0.6084906, g: 1, b: 0.9962812, a: 0}
+  color: {r: 0, g: 0, b: 0, a: 0}
   OrbitObject: {fileID: 0}
   locations: []
   stations: []
-  Star: {fileID: 11400000, guid: fa647b7831f2d344dbee124ed07184cc, type: 2}
-  Moons: []
+  Planet: {fileID: 11400000, guid: 039d852f6cd50d847989d496143f155e, type: 2}

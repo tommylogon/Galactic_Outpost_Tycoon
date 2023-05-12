@@ -12,10 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 670ae2a13a69b6e47bf15e9ed7b6b9ba, type: 3}
   m_Name: Stanton
   m_EditorClassIdentifier: 
+  Position: {x: 50, y: 50}
+  Type: 0
   Name: Stanton
   Size: 140000
+  DistanceFromParent: 0
+  Rotation: 0
+  RotationSpeed: 0
+  color: {r: 1, g: 0.784184, b: 0, a: 0}
+  OrbitObject: {fileID: 0}
+  locations: []
+  stations: []
   Planets:
   - {fileID: 11400000, guid: 039d852f6cd50d847989d496143f155e, type: 2}
   - {fileID: 11400000, guid: 2e8b15966b6da87418a6b77824dffe79, type: 2}
+  - {fileID: 11400000, guid: a93e625c2e6c6294b9cf972a20a92995, type: 2}
   - {fileID: 11400000, guid: 2fde4251fb305c644bdb9fe6f41ab639, type: 2}
-  stations: []

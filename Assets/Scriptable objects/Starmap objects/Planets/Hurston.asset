@@ -12,12 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ece874b85dfb642a0b9e0814a21643, type: 3}
   m_Name: Hurston
   m_EditorClassIdentifier: 
+  Position: {x: 31, y: 25}
+  Type: 0
   Name: Hurston
-  Size: 1274
-  DistanceFromStar: 12810903
-  Star: {fileID: 11400000, guid: fa647b7831f2d344dbee124ed07184cc, type: 2}
-  Moons:
-  - {fileID: 11400000, guid: b36eedc9ff84b9841ae6b84efb6a3770, type: 2}
-  stations: []
+  Size: 2000
+  DistanceFromParent: 12
+  Rotation: 0
+  RotationSpeed: 0
+  color: {r: 0.5471698, g: 0.2168802, b: 0, a: 0}
+  OrbitObject: {fileID: 0}
   locations:
   - {fileID: 11400000, guid: f7df3e47ba19f384c99374b214ee95b2, type: 2}
+  stations: []
+  Star: {fileID: 11400000, guid: fa647b7831f2d344dbee124ed07184cc, type: 2}
+  Moons:
+  - {fileID: 11400000, guid: 1d0a68af880154e449b9a4d9a34a8679, type: 2}
+  - {fileID: 11400000, guid: b36eedc9ff84b9841ae6b84efb6a3770, type: 2}
+  - {fileID: 11400000, guid: 3f533ce083edabc4a90e791890a2ba16, type: 2}
+  - {fileID: 11400000, guid: e637c476c376a41419df32fa16f4c4ef, type: 2}

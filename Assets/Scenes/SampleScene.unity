@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 233790686}
   - component: {fileID: 233790685}
   - component: {fileID: 233790684}
+  - component: {fileID: 233790687}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -156,7 +157,9 @@ MonoBehaviour:
   overviewContentTemplate: {fileID: 9197481963319205126, guid: 9e9dcdd2e1023ec46b04568389629daa, type: 3}
   locationSelectionContentTemplate: {fileID: 9197481963319205126, guid: f5cfe20b60a647f4eb5651ceb75ea2fb, type: 3}
   outpostModulesContentTemplate: {fileID: 9197481963319205126, guid: 972427179d22a844db06c535f6db057d, type: 3}
+  starmapContentTemplate: {fileID: 9197481963319205126, guid: 55cccd4f2d06ef043b5a8ab9ed4f05bd, type: 3}
   OutpostModuleTemplate: {fileID: 9197481963319205126, guid: 3719f34621f59294b89c827032e9731b, type: 3}
+  mapManager: {fileID: 233790687}
 --- !u!114 &233790685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +191,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &233790687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233790683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28037aaac8d92ba49af21a5d2d4c937e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solarSystemManager: {fileID: 812240538}
+  gridCreationDelay: 0
+  gridSize: 50
+  gridElementSize: 10
+  poolSize: 1000
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +383,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Star: {fileID: 11400000, guid: fa647b7831f2d344dbee124ed07184cc, type: 2}
   Locations: []
+  mapManager: {fileID: 233790687}
+  updateInterval: 60
 --- !u!4 &812240539
 Transform:
   m_ObjectHideFlags: 0

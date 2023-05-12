@@ -8,7 +8,7 @@ public class Location : ScriptableObject
     public string Name;
     public ScriptableObject LocationObject; // Star, Planet, Moon, or SpaceStation
     public List<ResourceType> AvailableResources;
-    [Range(0, 1)]
+    [Range(-1, 1)]
     public List<float> ResourceChances;
     public List<int> ResourceAmount;
     public List<Resource> InitializedResources;

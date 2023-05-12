@@ -12,13 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ece874b85dfb642a0b9e0814a21643, type: 3}
   m_Name: Crusader
   m_EditorClassIdentifier: 
+  Position: {x: 0, y: 0}
+  Type: 0
   Name: 
-  Size: 16000
-  DistanceFromStar: 19000000
-  Star: {fileID: 11400000, guid: fa647b7831f2d344dbee124ed07184cc, type: 2}
-  Moons:
-  - {fileID: 11400000, guid: 193ce342a4fdf5043938eaea7036f69b, type: 2}
-  - {fileID: 11400000, guid: 3db9fa2b9965bca4390c07bb2dfacb52, type: 2}
-  - {fileID: 11400000, guid: 29a046d3d1386064e9ffb7a20560ccf1, type: 2}
-  stations: []
+  Size: 65000
+  DistanceFromParent: 19
+  Rotation: 0
+  RotationSpeed: 0
+  color: {r: 0.36290863, g: 0.079832695, b: 0.4339623, a: 0}
+  OrbitObject: {fileID: 0}
   locations: []
+  stations: []
+  Star: {fileID: 11400000, guid: fa647b7831f2d344dbee124ed07184cc, type: 2}
+  Moons: []

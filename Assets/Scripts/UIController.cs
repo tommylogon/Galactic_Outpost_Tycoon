@@ -30,6 +30,7 @@ public class UIController : MonoBehaviour
     public VisualTreeAsset overviewContentTemplate;
     public VisualTreeAsset locationSelectionContentTemplate;
     public VisualTreeAsset outpostModulesContentTemplate;
+    public VisualTreeAsset starmapContentTemplate;
 
     public VisualTreeAsset OutpostModuleTemplate;
 
@@ -40,12 +41,14 @@ public class UIController : MonoBehaviour
     private Button createOutpostButton;
     private Button resourcesButton;
     private Button outpostModulesButton;
-    Button addCrewButton;
-    Button removeCrewButton;
-    Button upgradeButton;
+    private Button starmapButton;
+    private Button addCrewButton;
+    private Button removeCrewButton;
+    private Button upgradeButton;
 
     private SolarSystemManager solarSystemManager;
     private OutpostResourceManager outpostResourceManager;
+    [SerializeField] private MapManager mapManager;
 
     private Label moneyLabel;
     private Label metalsLabel;
@@ -100,9 +103,12 @@ public class UIController : MonoBehaviour
         storageLabel = root.Q<Label>("storageLabel");
         hangarSpaceLabel = root.Q<Label>("hangarSpaceLabel");
 
-        solarSystemManager = FindObjectOfType<SolarSystemManager>();
-        
 
+        
+        solarSystemManager = FindObjectOfType<SolarSystemManager>();
+
+        starmapButton = root.Q<Button>("starmapButton");
+        starmapButton.clicked += ShowStarmap;
         overviewButton.clicked += ShowOverview;
         resourcesButton.clicked += ShowResources;
         createOutpostButton.clicked += ShowLocationSelection;
@@ -359,5 +365,16 @@ public class UIController : MonoBehaviour
         root.Q<Label>("selectedModuleCurrentCrew").text = module.CrewCurrent.ToString();
         root.Q<Label>("selectedModuleCrew").text = module.CrewRequirement.ToString();
     }
+    private void ShowStarmap()
+    {
+        // Clear existing content
+        gameContentArea.Clear();
 
+        // Load the starmap content from the UXML file and add it to the gameContentArea
+        VisualElement starmapContent = starmapContentTemplate.CloneTree();
+        gameContentArea.Add(starmapContent);
+        currentView = ViewType.Starmap;
+        mapManager.OpenMap();
+        mapManager.ShowStarMap();
+    }
 }

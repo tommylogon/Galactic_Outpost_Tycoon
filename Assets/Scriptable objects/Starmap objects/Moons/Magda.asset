@@ -10,11 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b67144a8ec66cda44a317aa96c6ea1e8, type: 3}
-  m_Name: Cellin
+  m_Name: Magda
   m_EditorClassIdentifier: 
-  Name: Cellin
-  Size: 520
-  DistanceFromPlanet: 55000
-  Planet: {fileID: 0}
-  stations: []
+  Position: {x: 0, y: 0}
+  Type: 0
+  Name: 
+  Size: 1
+  DistanceFromParent: 93500
+  Rotation: 0
+  RotationSpeed: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
+  OrbitObject: {fileID: 0}
   locations: []
+  stations: []
+  Planet: {fileID: 11400000, guid: 039d852f6cd50d847989d496143f155e, type: 2}
