@@ -24,7 +24,7 @@ MonoBehaviour:
   CrewCurrent: 0
   TimeBase: 10
   UpgradeTime: 5
-  upgradeTimeIncrease: 0.25
+  upgradeTimeIncrease: 25
   wasteProduction:
   - Type: 11
     Amount: 1

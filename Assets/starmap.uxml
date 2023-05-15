@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/MapManager.USS?fileID=7433441132597879392&amp;guid=d948f87e588bf15428e06fad4918f1b6&amp;type=3#MapManager" />
-    <ui:VisualElement name="root">
-        <ui:VisualElement name="gridContainer" class="gridContainer" />
+    <ui:VisualElement name="root" style="flex-grow: 1;">     
+            <ui:VisualElement name="gridContainer" class="gridContainer" style="flex-grow: 1;" />
     </ui:VisualElement>
 </ui:UXML>

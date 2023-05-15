@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ece874b85dfb642a0b9e0814a21643, type: 3}
   m_Name: Arccorp
   m_EditorClassIdentifier: 
-  Position: {x: 0, y: 0}
-  Type: 0
-  Name: 
+  Position: {x: -1073741799, y: -1859775368}
+  Type: 1
+  Name: Arccorp
   Size: 2000
-  DistanceFromParent: 24
-  Rotation: 0
+  DistanceFromParent: 29
+  Rotation: 60
   RotationSpeed: 0
-  color: {r: 0, g: 0.02782264, b: 0.5660378, a: 0}
+  color: {r: 0, g: 0.02782264, b: 0.5660378, a: 1}
   OrbitObject: {fileID: 0}
   locations: []
   stations: []

@@ -4,5 +4,5 @@ using static Resource;
 public class ResourceStorageItem
 {
     public ResourceType Resource;
-    public float Amount;
+    public int Amount;
 }

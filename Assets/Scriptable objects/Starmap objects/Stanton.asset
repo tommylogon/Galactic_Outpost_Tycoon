@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 670ae2a13a69b6e47bf15e9ed7b6b9ba, type: 3}
   m_Name: Stanton
   m_EditorClassIdentifier: 
-  Position: {x: 50, y: 50}
+  Position: {x: 25, y: 25}
   Type: 0
   Name: Stanton
   Size: 140000
   DistanceFromParent: 0
   Rotation: 0
   RotationSpeed: 0
-  color: {r: 1, g: 0.784184, b: 0, a: 0}
+  color: {r: 1, g: 0.784184, b: 0, a: 1}
   OrbitObject: {fileID: 0}
   locations: []
   stations: []

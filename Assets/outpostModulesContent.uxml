@@ -6,37 +6,37 @@
 				<ui:Image name="selectedModuleImage" style="flex-grow: 0; height: 250px; width: 250px;"/>
 				<ui:VisualElement name="ModuleDetails" style="flex-grow: 1;">
 					<ui:VisualElement name="ModuleIdentifiers" style="flex-direction: row; justify-content: center;">
-						<ui:Label name="selectedModuleName" text="Name: "/>
-						<ui:Label name="upgradeTimer" style="flex-grow: 1;" text="Upgrade Timer: "/>
-						<ui:Label name="selectedModuleLevel" text="Level: " style="flex-direction: column; justify-content: flex-start; align-items: auto;"/>
+						<ui:Label name="selectedModuleName" text="Name: " class="DefaultText"/>
+						<ui:Label name="upgradeTimer" style="flex-grow: 1;" text="Upgrade Timer: " class="DefaultText"/>
+						<ui:Label name="selectedModuleLevel" text="Level: " style="flex-direction: column; justify-content: flex-start; align-items: auto;" class="DefaultText"/>
 					</ui:VisualElement>
 					<ui:VisualElement name="ModuleStats" style="flex-direction: row; justify-content: space-between;">
-						<ui:VisualElement name="CrewModifier">
-							<ui:Label name="selectedModuleCurrentCrew" text="Current Crew: "/>
-							<ui:Label name="selectedModuleCrew" text="Crew recuired: "/>
-							<ui:Button name="selectedModuleAddCrewButton" text="Add&#10;" class="IncementButton"/>
+						<ui:VisualElement name=" crewModifier">
+							<ui:Label name="selectedModuleCurrentCrew" text=" current Crew: " class="DefaultText"/>
+							<ui:Label name="selectedModuleCrew" text=" crew recuired: " class="DefaultText"/>
+							<ui:Button name="selectedModuleAddCrewButton" text="Add&#10;" class="IncementButton" />
 							<ui:Button name="selectedModuleRemoveCrewButton" text="Remove&#10;" class="IncementButton" />
 						</ui:VisualElement>
 						<ui:VisualElement>
-							<ui:Label name="selectedModuleResource" text="Resource: "/>
-							<ui:Label name="selectedModuleEnergy" text="Energy required:  "/>
-							<ui:Label name="selectedModuleExtractionRate" text="Extraction Rate: "/>
-							<ui:Label name="selectedModuleEfficiency" text="Efficiency: "/>
-							<ui:Label name="selectedModuleWasteProduction" text="Waste Production: "/>
-							<ui:Label name="storageLabel" style="display: none;"/>
-							<ui:Label name="habitationLabel" style="display: none;"/>
+							<ui:Label name="selectedModuleResource" text="Resource: " class="DefaultText"/>
+							<ui:Label name="selectedModuleEnergy" text="Energy required:  " class="DefaultText"/>
+							<ui:Label name="selectedModuleExtractionRate" text="Extraction Rate: " class="DefaultText"/>
+							<ui:Label name="selectedModuleEfficiency" text="Efficiency: " class="DefaultText"/>
+							<ui:Label name="selectedModuleWasteProduction" text="Waste Production: " class="DefaultText"/>
+							<ui:Label name="storageLabel" style="display: none;" class="DefaultText"/>
+							<ui:Label name="habitationLabel" style="display: none;" class="DefaultText"/>
 						</ui:VisualElement>
 					</ui:VisualElement>
 					<ui:VisualElement name="NextLevelStats" style="flex-direction: column;">
-						<ui:Label text="Next Level Stats:"/>
-						<ui:Label name="nextLevelTimer"/>
-						<ui:Label name="nextLevelCrewRequirement"/>
-						<ui:Label name="nextLevelResourceProduction"/>
-						<ui:Label name="nextLevelPowerConsumption"/>
-						<ui:Label name="nextLevelWasteProduction"/>
-						<ui:Label name="selectedModuleUpgradeCost" text="Upgrade Cost: "/>						
+						<ui:Label text="Next Level Stats:" class="DefaultText"/>
+						<ui:Label name="nextLevelTimer" class="DefaultText"/>
+						<ui:Label name="nextLevelCrewRequirement" class="DefaultText"/>
+						<ui:Label name="nextLevelResourceProduction" class="DefaultText"/>
+						<ui:Label name="nextLevelPowerConsumption" class="DefaultText"/>
+						<ui:Label name="nextLevelWasteProduction" class="DefaultText"/>
+						<ui:Label name="selectedModuleUpgradeCost" text="Upgrade Cost: " class="DefaultText"/>						
 						<ui:Button name="selectedModuleUpgradeButton" text="Upgrade"/>						
-						<ui:Label name="moduleUpgradeLable" style="flex-grow: 1;" text="Upgrade message: "/>
+						<ui:Label name="moduleUpgradeLable" style="flex-grow: 1;" text="Upgrade message: " class="DefaultText"/>
 					</ui:VisualElement>
 				</ui:VisualElement>
 			</ui:VisualElement>

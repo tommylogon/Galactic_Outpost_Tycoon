@@ -56,10 +56,11 @@ public class Outpost
     public void UpgradeModule(OutpostModule module)
     {
         List<Resource> upgradeCost = module.CalculateUpgradeCost(module.level + 1);
-        bool resourcesAvailable = ResourceManager.AreResourcesAvailableForUpgrade(upgradeCost);
+        
 
-        if (resourcesAvailable)
+        if (ResourceManager.AreResourcesAvailableForUpgrade(upgradeCost))
         {
+            //ResourceManager.ConsumeResources(upgradeCost);
             if (module.IsUpgrading)
             {
                 Debug.Log($"Module is already upgrading. Time left: {GetUpgradeTimeLeft(module)} seconds.");

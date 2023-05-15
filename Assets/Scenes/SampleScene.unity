@@ -135,6 +135,9 @@ GameObject:
   - component: {fileID: 233790685}
   - component: {fileID: 233790684}
   - component: {fileID: 233790687}
+  - component: {fileID: 233790689}
+  - component: {fileID: 233790690}
+  - component: {fileID: 233790691}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -154,11 +157,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178253d5f79d4c34b9187bd0f164927b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentView: 0
   overviewContentTemplate: {fileID: 9197481963319205126, guid: 9e9dcdd2e1023ec46b04568389629daa, type: 3}
   locationSelectionContentTemplate: {fileID: 9197481963319205126, guid: f5cfe20b60a647f4eb5651ceb75ea2fb, type: 3}
-  outpostModulesContentTemplate: {fileID: 9197481963319205126, guid: 972427179d22a844db06c535f6db057d, type: 3}
   starmapContentTemplate: {fileID: 9197481963319205126, guid: 55cccd4f2d06ef043b5a8ab9ed4f05bd, type: 3}
-  OutpostModuleTemplate: {fileID: 9197481963319205126, guid: 3719f34621f59294b89c827032e9731b, type: 3}
+  uiOverview: {fileID: 233790689}
+  resourceBar: {fileID: 233790690}
+  uiOutpostModules: {fileID: 233790691}
+  uiLocationSelection: {fileID: 0}
+  uiStarmap: {fileID: 0}
   mapManager: {fileID: 233790687}
 --- !u!114 &233790685
 MonoBehaviour:
@@ -205,9 +212,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   solarSystemManager: {fileID: 812240538}
   gridCreationDelay: 0
-  gridSize: 50
-  gridElementSize: 10
+  gridSize: 41
+  gridElementSize: 15
+  solarSystemDiameter: 90
   poolSize: 1000
+--- !u!114 &233790689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233790683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a55dee1a3170c4e9a10578ddf62514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overviewContentTemplate: {fileID: 9197481963319205126, guid: 9e9dcdd2e1023ec46b04568389629daa, type: 3}
+--- !u!114 &233790690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233790683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed243ecf89932043a9b2b5e973d5c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiController: {fileID: 233790684}
+--- !u!114 &233790691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233790683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9d2bd45431ce44aa0e4d404aa4ffbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiController: {fileID: 233790684}
+  outpostModulesContentTemplate: {fileID: 9197481963319205126, guid: 972427179d22a844db06c535f6db057d, type: 3}
+  OutpostModuleTemplate: {fileID: 9197481963319205126, guid: 3719f34621f59294b89c827032e9731b, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,9 +371,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AvailableModules:
-  - {fileID: 11400000, guid: 3ce8eb5db00d62b4a96f11b35fe33159, type: 2}
   - {fileID: 11400000, guid: 2ed2d7aa28e7d4049901468f04bd0e12, type: 2}
   - {fileID: 11400000, guid: c7a67b2a84b9b0d40a7325bd62c29350, type: 2}
+  - {fileID: 11400000, guid: 3ce8eb5db00d62b4a96f11b35fe33159, type: 2}
   - {fileID: 11400000, guid: 5cda3a123314b0449aca0ca1d482e4bd, type: 2}
   - {fileID: 11400000, guid: 749e7da2e0001bb46a3b169d564bb722, type: 2}
   - {fileID: 11400000, guid: 40bee3f623e6f92478b68a29a9f41157, type: 2}

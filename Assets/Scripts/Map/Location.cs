@@ -36,7 +36,7 @@ public class Location : ScriptableObject
             if (randomValue <= resourceChance)
             {
                 // Initialize the resource with a starting amount (customize this value as needed)
-                float startingAmount = ResourceAmount[i];
+                int startingAmount = ResourceAmount[i];
                 Resource resource = new Resource(resourceType, startingAmount);
                 InitializedResources.Add(resource);
             }

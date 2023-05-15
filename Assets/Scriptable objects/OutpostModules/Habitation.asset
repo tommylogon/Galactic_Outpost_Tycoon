@@ -17,14 +17,14 @@ MonoBehaviour:
   image: {fileID: 0}
   resourceProductionBase: 0
   resourceProductionIncrease: 0
-  powerBase: 0
-  powerIncrease: 0
+  powerBase: 1
+  powerIncrease: 1
   baseCrewRequirement: 0
   crewIncrease: 0
   CrewCurrent: 0
-  TimeBase: 0
+  TimeBase: 15
   UpgradeTime: 0
-  upgradeTimeIncrease: 0
+  upgradeTimeIncrease: 25
   wasteProduction:
   - Type: 9
     Amount: 2

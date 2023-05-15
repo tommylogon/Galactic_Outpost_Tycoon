@@ -24,7 +24,7 @@ public abstract class OutpostModule : ScriptableObject
     public int CrewRequirement => GetCrewRequirementForLevel(level);
 
     public float TimeBase;
-    public float UpgradeTime;
+    public float UpgradeTime => CalculateUpgradeTime(level);
     public float upgradeTimeIncrease;
 
     public List<Resource> wasteProduction;
@@ -65,7 +65,7 @@ public abstract class OutpostModule : ScriptableObject
 
         foreach (Resource resource in wasteProduction)
         {
-            wasteProductionAtLevel.Add(new Resource(resource.Type, (resource.Amount + (wasteProductionIncrease * (level - 1))) * GetEfficiency()));
+            wasteProductionAtLevel.Add(new Resource(resource.Type, (int)(Mathf.RoundToInt(resource.Amount + (wasteProductionIncrease * (level - 1))) * GetEfficiency())));
         }
 
         return wasteProductionAtLevel;
@@ -84,7 +84,7 @@ public abstract class OutpostModule : ScriptableObject
     }
     public float CalculateUpgradeTime(int level)
     {
-        return TimeBase + (UpgradeTime * level) + (upgradeTimeIncrease * Mathf.Pow(level, 2));
+        return TimeBase + (upgradeTimeIncrease * level);
     }
 
     public float GetEfficiency()

@@ -6,13 +6,13 @@ using static Resource;
 public class StorageSpace : OutpostModule
 {
     public List<ResourceStorageItem> CurrentResourceStorage;
-    public float MaxStorage;
-    public float BaseMaxStorage;
-    public float MaxStorageIncrease;
+    public int MaxStorage;
+    public int BaseMaxStorage;
+    public int MaxStorageIncrease;
 
-    public bool CanAddResource(ResourceType resourceType, float amount)
+    public bool CanAddResource(ResourceType resourceType, int amount)
     {
-        float currentStorage = 0;
+        int currentStorage = 0;
 
         foreach (ResourceStorageItem item in CurrentResourceStorage)
         {
@@ -25,7 +25,7 @@ public class StorageSpace : OutpostModule
         return currentStorage + amount <= MaxStorage;
     }
 
-    public void AddResource(ResourceType resourceType, float amount)
+    public void AddResource(ResourceType resourceType, int amount)
     {
         bool resourceFound = false;
         foreach (ResourceStorageItem item in CurrentResourceStorage)
@@ -44,7 +44,7 @@ public class StorageSpace : OutpostModule
             CurrentResourceStorage.Add(newItem);
         }
     }
-    public float CalculateMaxStorage(int level)
+    public int CalculateMaxStorage(int level)
     {
         return BaseMaxStorage + (MaxStorageIncrease * (level - 1));
     }

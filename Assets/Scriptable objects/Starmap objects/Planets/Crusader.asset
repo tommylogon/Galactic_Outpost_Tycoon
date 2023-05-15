@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ece874b85dfb642a0b9e0814a21643, type: 3}
   m_Name: Crusader
   m_EditorClassIdentifier: 
-  Position: {x: 0, y: 0}
-  Type: 0
-  Name: 
+  Position: {x: 2074309942, y: 555809692}
+  Type: 1
+  Name: Crusader
   Size: 65000
   DistanceFromParent: 19
-  Rotation: 0
+  Rotation: 195
   RotationSpeed: 0
-  color: {r: 0.36290863, g: 0.079832695, b: 0.4339623, a: 0}
+  color: {r: 0.36290863, g: 0.079832695, b: 0.4339623, a: 1}
   OrbitObject: {fileID: 0}
   locations: []
   stations: []

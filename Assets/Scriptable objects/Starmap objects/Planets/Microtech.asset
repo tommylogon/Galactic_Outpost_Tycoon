@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ece874b85dfb642a0b9e0814a21643, type: 3}
   m_Name: Microtech
   m_EditorClassIdentifier: 
-  Position: {x: 0, y: 0}
-  Type: 0
-  Name: 
+  Position: {x: -1518500224, y: 1518500274}
+  Type: 1
+  Name: Microtech
   Size: 2000
-  DistanceFromParent: 51
-  Rotation: 0
+  DistanceFromParent: 42
+  Rotation: -45
   RotationSpeed: 0
-  color: {r: 0.6084906, g: 1, b: 0.9962812, a: 0}
+  color: {r: 0.6084906, g: 1, b: 0.9962812, a: 1}
   OrbitObject: {fileID: 0}
   locations: []
   stations: []

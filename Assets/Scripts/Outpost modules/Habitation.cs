@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Habitation", menuName = "Outpost/Habitation")]
 public class Habitation : OutpostModule
 {
-    public float FoodConsumptionPerPerson;
+    public int FoodConsumptionPerPerson;
     public int BaseHabitableSpace;
     public int HabitableSpaceIncrease;
     public int HabitableSpace;
@@ -11,7 +11,7 @@ public class Habitation : OutpostModule
     public int WorkingPopulation;
 
     public int TotalPopulation => IdlePopulation + WorkingPopulation;
-    public float FoodConsumption => FoodConsumptionPerPerson * TotalPopulation;
+    public int FoodConsumption => FoodConsumptionPerPerson * TotalPopulation;
 
     // Add a method to add idle crew members to the habitation
     public void AddIdleCrew(int count)

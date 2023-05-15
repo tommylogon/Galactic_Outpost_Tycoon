@@ -6,9 +6,9 @@ using static OutpostManager;
 public class Resource
 {
     public ResourceType Type;
-    public float Amount;
+    public int Amount;
 
-    public Resource(ResourceType type, float amount)
+    public Resource(ResourceType type, int amount)
     {
         Type = type;
         Amount = amount;

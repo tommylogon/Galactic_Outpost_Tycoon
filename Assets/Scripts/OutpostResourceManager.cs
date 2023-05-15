@@ -6,12 +6,17 @@ using static Resource;
 public class OutpostResourceManager
 {
     private Outpost outpost;
-    public Dictionary<ResourceType, float> resources;
+    public Dictionary<ResourceType, int> resources;
 
+    int totalCurrentStorage = 0;
+    int totalMaxStorage = 0;
+    int totalIdlePopulation = 0;
+    int totalWorkingPopulation = 0;
+    int totalHabitationCapacity = 0;
     public OutpostResourceManager(Outpost outpost)
     {
         this.outpost = outpost;
-        resources = new Dictionary<ResourceType, float>();
+        resources = new Dictionary<ResourceType, int>();
         InitializeResources();
     }
 
@@ -31,14 +36,14 @@ public class OutpostResourceManager
         ProcessWasteManagement();
         ProcessResourceStorage();
         ProcessHabitation();
-        UIController.instance.UpdateResourceLabels();
+
     }
 
     private void ProcessHabitation()
     {
-        int totalIdlePopulation = 0;
-        int totalWorkingPopulation = 0;
-        int totalHabitationCapacity = 0;
+         totalIdlePopulation = 0;
+         totalWorkingPopulation = 0;
+         totalHabitationCapacity = 0;
 
         foreach (OutpostModule module in outpost.Modules)
         {
@@ -52,7 +57,12 @@ public class OutpostResourceManager
 
         // Update the resources dictionary with the new crew counts
 
-        UIController.instance.UpdateHabitationLabels(totalIdlePopulation, totalWorkingPopulation, totalHabitationCapacity);
+        //UIController.instance.UpdateHabitationLabels(totalIdlePopulation, totalWorkingPopulation, totalHabitationCapacity);
+    }
+
+    public (int CrewIdle, int CrewWorking, int MaxPopulation) GetHabitationData()
+    {
+        return (totalIdlePopulation, totalWorkingPopulation, totalHabitationCapacity);
     }
     public void AddCrew(int newCrewNumber)
     {
@@ -89,7 +99,7 @@ public class OutpostResourceManager
             }
         }
     }
-    private bool CanAddResource(ResourceType resourceType, float amount)
+    private bool CanAddResource(ResourceType resourceType, int amount)
     {
         float maxStorage = 0;
         float currentStorage = 0;
@@ -146,7 +156,7 @@ public class OutpostResourceManager
     }
     private void ProcessFoodConsumption()
     {
-        float totalFoodConsumption = 0;
+        int totalFoodConsumption = 0;
 
         foreach (OutpostModule module in outpost.Modules)
         {
@@ -163,15 +173,14 @@ public class OutpostResourceManager
 
     private void ProcessResourceStorage()
     {
-        float totalCurrentStorage = 0;
-        float totalMaxStorage = 0;
+        
 
         foreach (OutpostModule module in outpost.Modules)
         {
             if (module is StorageSpace storage)
             {
-                float maxStorage = storage.MaxStorage;
-                float currentStorage = 0;
+                int maxStorage = storage.MaxStorage;
+                int currentStorage = 0;
 
                 foreach (ResourceStorageItem item in storage.CurrentResourceStorage)
                 {
@@ -188,10 +197,12 @@ public class OutpostResourceManager
             }
         }
 
-        UIController.instance.UpdateStorageLabels(totalCurrentStorage, totalMaxStorage);
     }
 
-
+    public (int totalCurrentStorage, int totalMaxStorage) GetStorageData()
+    {
+        return (totalCurrentStorage, totalMaxStorage);
+    }
 
     public float GetResourceAmount(ResourceType resourceType)
     {
@@ -220,7 +231,7 @@ public class OutpostResourceManager
                 {
                     habitation.RemoveIdleCrew(1);
                     module.AddCrew();
-                    UIController.instance.UpdateModuleCrewLabel(module);
+                    //UIController.instance.UpdateModuleCrewLabel(module);
                     break;
                 }
             }
@@ -232,7 +243,7 @@ public class OutpostResourceManager
         if (module.CrewCurrent > 0)
         {
             module.RemoveCrew();
-            UIController.instance.UpdateModuleCrewLabel(module);
+            //UIController.instance.UpdateModuleCrewLabel(module);
 
             foreach (OutpostModule habitationModule in outpost.Modules)
             {

@@ -2,10 +2,10 @@
   <ui:VisualElement name="overviewContent">
     <!-- Outpost Summary -->
     <ui:VisualElement name="outpostSummary" class="panel">
-      <ui:Label text="Outpost Name: " />
-      <ui:Label text="Location: " />
-      <ui:Label text="Level: " />
-      <ui:Image name="outpostThumbnail" />
+      <ui:Label text="Outpost Name: " class="DefaultText"/>
+      <ui:Label text="Location: " class="DefaultText"/>
+      <ui:Label text="Level: " class="DefaultText"/>
+      <ui:Image name="outpostThumbnail" class="DefaultText"/>
     </ui:VisualElement>
 
     <!-- Resource Status -->

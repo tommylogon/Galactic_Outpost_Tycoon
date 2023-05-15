@@ -24,6 +24,8 @@ public class MapManager : MonoBehaviour
 
     public int gridSize;
     public float gridElementSize;
+    public int solarSystemDiameter;
+    
 
     public int poolSize = 10000;
     private Queue<VisualElement> gridElementPool;
@@ -110,6 +112,7 @@ public class MapManager : MonoBehaviour
     {
         if (obj.Position.x >= 0 && obj.Position.x < gridSize && obj.Position.y >= 0 && obj.Position.y < gridSize)
         {
+            
             gridElements[obj.Position.x, obj.Position.y].style.backgroundColor = obj.color;
             if(obj.icon != null)
             {
@@ -125,6 +128,11 @@ public class MapManager : MonoBehaviour
     {
         Debug.Log($"Grid element clicked at: ({x}, {y})");
 
+        CelestialObject clickedObject = gridElements[x, y].userData as CelestialObject;
+        if (clickedObject != null)
+        {
+            Debug.Log($"Clicked on celestial object: {clickedObject.Name}");
+        }
         switch (currentMapLevel)
         {
             case MapLevel.Star:
@@ -149,8 +157,8 @@ public class MapManager : MonoBehaviour
         ClearGrid();
         
         currentMapLevel = MapLevel.Star;
-        gridSize = 50; // Adjust gridSize and gridElementSize based on the scale you want
-        gridElementSize = 10;
+        //gridSize = 50; // Adjust gridSize and gridElementSize based on the scale you want
+        //gridElementSize = 10;
 
         StartCoroutine(CreateGrid(gridSize, gridElementSize, MapLevel.Star, solarSystemManager.Star));
     }
@@ -164,7 +172,7 @@ public class MapManager : MonoBehaviour
                 star.Position = new Vector2Int(gridSize / 2, gridSize / 2);
                 PlaceSolarSystemObject(star);
                 // Populate the grid with the solar system objects (planets and stations)
-                float scaleFactor = gridElementSize/10;
+                float scaleFactor = solarSystemDiameter/gridSize;
                 foreach (Planet planet in star.Planets)
                 {
                     // Calculate the planet's grid position based on its distance from the star
@@ -245,7 +253,7 @@ public class MapManager : MonoBehaviour
                 // Set the grid element color to the default (transparent)
                 if (gridElements != null && gridElements[x, y] != null)
                 {
-                    gridElements[x, y].style.backgroundColor = new Color(0, 0, 0, 0);
+                    gridElements[x, y].style.backgroundColor = Color.gray;
                     gridElements[x, y].userData = null;
                     ReturnGridElementToPool(gridElements[x, y]);
                     gridContainer.Remove(gridElements[x, y]);

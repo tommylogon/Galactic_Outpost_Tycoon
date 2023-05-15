@@ -1,27 +1,28 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <ui:VisualElement name="root">
-        <ui:VisualElement name="topRow" style="flex-direction: row; justify-content: flex-start; flex-grow: 1;">
+    <Style src="project://database/Assets/style.uss?fileID=7433441132597879392&amp;guid=e2f7939a6fd57ef4cb8ce94677c041e6&amp;type=3#style" />
+    <ui:VisualElement name="root" style="flex-grow: 1;">
+        <ui:VisualElement name="topRow" style="flex-direction: row; justify-content: flex-start; flex-grow: 0;">
             <ui:VisualElement name="resourcePanel" style="flex-direction: row; justify-content: center; align-items: center; flex-grow: 1;">
-                <ui:Label name="moneyLabel" text="Money: 0" />
-                <ui:Label name="metalsLabel" text="Metals: 0" />
-                <ui:Label name="mineralsLabel" text="Minerals: 0" />
-                <ui:Label name="gasLabel" text="Gas: 0" />
-                <ui:Label name="foodLabel" text="Food: 0" />
-                <ui:Label name="powerLabel" text="Power: 0" />
-                <ui:Label name="agriculturalSuppliesLabel" text="Agricultural Supplies: 0" />
-                <ui:Label name="alloysLabel" text="Alloys: 0" />
-                <ui:Label name="consumerGoodsLabel" text="Consumer Goods: 0" />
-                <ui:Label name="medicalSuppliesLabel" text="Medical Supplies: 0" />
-                <ui:Label name="wasteLabel" text="Waste: 0" />
-                <ui:Label name="viceLabel" text="Vice: 0" />
-                <ui:Label name="scrapLabel" text="Scrap: 0" />
-                <ui:Label name="habitationLabel" text="Habitation: 0/0" />
-                <ui:Label name="storageLabel" text="Storage: 0/0" />
-                <ui:Label name="hangarSpaceLabel" text="Hangar Space: 0" />
+                <ui:Label name="moneyLabel" text="Money: 0" class="DefaultText" />
+                <ui:Label name="metalsLabel" text="Metals: 0" class="DefaultText" />
+                <ui:Label name="mineralsLabel" text="Minerals: 0" class="DefaultText" />
+                <ui:Label name="gasLabel" text="Gas: 0" class="DefaultText" />
+                <ui:Label name="foodLabel" text="Food: 0" class="DefaultText" />
+                <ui:Label name="powerLabel" text="Power: 0" class="DefaultText" />
+                <ui:Label name="agriculturalSuppliesLabel" text="Agricultural Supplies: 0" class="DefaultText" />
+                <ui:Label name="alloysLabel" text="Alloys: 0" class="DefaultText" />
+                <ui:Label name="consumerGoodsLabel" text="Consumer Goods: 0" class="DefaultText" />
+                <ui:Label name="medicalSuppliesLabel" text="Medical Supplies: 0" class="DefaultText" />
+                <ui:Label name="wasteLabel" text="Waste: 0" class="DefaultText" />
+                <ui:Label name="viceLabel" text="Vice: 0" class="DefaultText" />
+                <ui:Label name="scrapLabel" text="Scrap: 0" class="DefaultText" />
+                <ui:Label name="habitationLabel" text="Habitation: 0/0" class="DefaultText" />
+                <ui:Label name="storageLabel" text="Storage: 0/0" class="DefaultText" />
+                <ui:Label name="hangarSpaceLabel" text="Hangar Space: 0" class="DefaultText" />
             </ui:VisualElement>
             <ui:Button name="menuButton" text="Menu" />
         </ui:VisualElement>
-        <ui:VisualElement name="mainArea" style="flex-direction: row;">
+        <ui:VisualElement name="mainArea" style="flex-direction: row; flex-grow: 1;">
             <ui:VisualElement name="leftColumn" style="flex-direction: column;">
                 <ui:Button name="createOutpostButton" text="Create Outpost" />
                 <ui:Button name="overviewButton" text="Overview" />
@@ -34,7 +35,7 @@
                 <ui:Button name="fleetButton" text="Fleet" />
                 <ui:Button name="starmapButton" text="Starmap" />
             </ui:VisualElement>
-            <ui:VisualElement name="gameContentArea" />
+            <ui:VisualElement name="gameContentArea" style="flex-grow: 1; min-height: 600px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
